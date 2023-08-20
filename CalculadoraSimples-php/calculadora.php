@@ -48,12 +48,11 @@ if(isset($_GET['num1'], $_GET['num2'], $_GET['calcular']))
             display: flex;
             align-items: center;
             justify-content: center;
-            //background: #181818;
-            background: linear-gradient(50deg,#b6defa, #965c93, #6b54dd, #22bb8a,#636abf, #3786ee);
+            background: #181818;
         }
         div {
-            background-color: rgba(180, 180, 180, 0.392);
-            box-shadow: 5px 5px 15px rgba(40, 39, 39, 0.633);
+            background-color: transparent;
+            box-shadow: 5px 5px 15px rgba(83, 83, 83, 0.633);
             color: white;
             border-radius: 30px;
             padding: 60px;
@@ -61,24 +60,25 @@ if(isset($_GET['num1'], $_GET['num2'], $_GET['calcular']))
             font-family: arial;
         }
         .num {
+            background-color: rgba(180, 180, 180, 0.392);
             padding: 10px;
             margin: 10px;
             border-radius: 25px;
             border: none;
-            box-shadow: 5px 5px 15px rgba(40, 39, 39, 0.633);
+            box-shadow: 5px 5px 15px rgba(83, 83, 83, 0.633);
         }
         .operacao {
-            background-color: #b6defa;
             border-radius: 20px;
             border: none;
             height: 30px;
         }
         .button {
-            background: #6574fe;
+            background: #0c0c0c;
+            color: white;
             border-radius: 15px;
             width: 70px;
-            height: 30px;
-            box-shadow: 5px 5px 15px rgba(40, 39, 39, 0.633);
+            height: 40px;
+            box-shadow: 5px 5px 15px rgba(83, 83, 83, 0.633);
         }
    </style>
 </head>
