@@ -86,7 +86,7 @@ if(isset($_GET['num1'], $_GET['num2'], $_GET['calcular']))
 <body>
     <div>
         <h1>Calculadora</h1> <br>
-        <form action="calculadora.php" method="GET">
+        <form action="" method="GET">
             <input type="number" class="num" name="num1" required> <br>
 
             <select class="operacao" name="calcular">
