@@ -2,7 +2,7 @@
 
 $num1 = 0;
 $num2 = 0;
-$resultado = 'calcular';
+$resultado = 0;
 
 if(isset($_GET['num1'], $_GET['num2'], $_GET['calcular']))
 {
