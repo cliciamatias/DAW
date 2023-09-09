@@ -3,7 +3,6 @@
 $v1 = $_GET['v1'];
 $v2 = $_GET['v2'];
 $operacao = $_GET['op'];
-$result = 0;
 
 switch($operacao)
 {
