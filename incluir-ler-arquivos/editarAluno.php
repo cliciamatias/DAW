@@ -48,7 +48,7 @@
             $arqAluno = 'dadosAluno.txt';
             $linha = file($arqAluno);
 
-            //verificando se o índice é válido
+            //verificando se o índice é válido, se ele está entre 0 e a quantidade de cadastros no arquivo
             if($id >= 0 && $id < count($linha)) 
             {
                 list($aluno, $matricula, $email) = explode(';', $linha[$id]);
@@ -72,9 +72,6 @@
 
             //função que reescreve no arquivo com as informações atualizadas
             file_put_contents($arqAluno, implode('', $linha));
-
-            //redirecionando de volta para a página principal após editar
-            //header('Location: lerAluno.php');
         }
     ?>
     <h1>Editar Aluno</h1>

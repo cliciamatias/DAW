@@ -56,8 +56,6 @@
             $linha = $aluno . ";" . $matricula . ";" . $email . "\n"; //criando linhas do arquivo
             fwrite($arqAluno,$linha); //escrevendo no arquivo
             fclose($arqAluno); //fechando o arquivo
-            //redirecionando de volta para a página principal após cadastrar
-            //header('Location: lerAluno.php');
         }
     ?>
     <h1>Dados do Aluno</h1> <br>
