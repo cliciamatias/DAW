@@ -9,11 +9,3 @@ id;nome;quantidade;valor
 29;Boticario Cuide-se Bem (Restauracao Extraordinaria) - Condicionador 250 Ml;2;R$24,99
 30;Boticario Cuide-se Bem (Hidratacao Imediata)  - Shampoo Hidratante 250 Ml;2;23,99
 31;Boticario Cuide-se Bem (Hidratacao Imediata) - Shampoo Hidratante 250 Ml;3;22,20
-  //'totalProduto' calculando o valor da compra do produto, de acordo com a quantidade escolhida 
-            //$totalProduto = $valor * $quantidade;
-
-            //'somaValor' somando o total de cada produto
-            //$somaValor += $totalProduto;
-
-            //'totalCompra' somando todos os produtos e conteudodos
-            //$totalCompra += $somaValor;
