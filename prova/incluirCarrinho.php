@@ -3,13 +3,38 @@
 <head>
     <title>CRUD - Adicionar Carrinho</title>
     <style>
-         body{
+        body {
+            background: linear-gradient(to right,rgb(17, 54, 71), rgb(20, 147,220), rgb(17, 54, 71));
+            color:white;
+            font-family: arial;
+            padding: 40px;
             text-align: center;
         }
-         form{
-            border: 2px solid #dddddd;
+        h1 {
             text-align: center;
-            padding: 8px;
+        }
+        form {
+            font-family: arial, sans-serif;
+        }
+        input {
+            border: 2px solid #dddddd;
+            background-color: #D6EEEE;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 7px;
+            width: 40%;
+        }
+        input:hover {
+            background-color: #dddddd;
+            color: black;
+        }
+        .botao {
+            width: 20%;
+            background-color: rgb(17, 54, 71);
+            color: white;
+        }
+        a {
+            color: white;
         }
     </style>
 </head>
@@ -22,17 +47,14 @@
         <label for="nome">Nome do Produto:</label>
         <input type="text" name="nome"> <br>
 
-        <label for="quantidade">Quantidade do produto:</label>
-        <input type="number" name="quantidade"> <br>
+        <label for="quantidade">Valor do produto:</label>
+        <input type="text" name="quantidade"> <br>
 
-        <label for="quantidade">Valor do produto (R$):</label>
-        <input type="text" name="valor" required> <br>
-
-        <input type="submit" value="Adicionar ao Carrinho">
+        <input class="botao" type="submit" value="Adicionar ao Carrinho">
     </form>
 
   <?php
-    //verificando se teve requisição por POST...
+    //verificando se teve requisição por POST
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         //Armazenando os valores inseridos no formulário em variáveis
@@ -48,29 +70,29 @@
         if(!file_exists("produtos.txt")) 
         {
             //criando o arquivo
-            $arqCarrinho = fopen("produtos.txt", "w");
+            $carrinho = fopen("produtos.txt", "w");
 
             //Montando a organização das colunas
             $conteudo = "nome;id;quantidade;valor";
 
             //Escrevendo no arquivo
-            fwrite($arqCarrinho, $texto);
+            fwrite($carrinho, $texto);
         } 
         //senão, se o prouto já existir...
         else 
         {
             //abrir o arquivo
-            $arqCarrinho = fopen("produtos.txt", "a");
+            $carrinho = fopen("produtos.txt", "a");
 
             //escrever no arquivo
-            fwrite($arqCarrinho, $texto);
+            fwrite($carrinho, $texto);
         }
         //fechando o arquivo
-        fclose($arqCarrinho);
+        fclose($carrinho);
 
-        echo "Produto adicionado ao carrinho!";
+        echo "Produto adicionado ao estoque!";
     }
 ?>
-<a href="listarCarrinho.php">Ver carrinho</a>
+<a href="listarCarrinho.php">Ver Produtos</a>
 </body>
 </html>
