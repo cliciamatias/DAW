@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>CRUD - Listar Produtos</title>
+    <script src="lerProdutos.js"></script>
+</head>
+<body>
+    <h1>Produtos em Estoque</h1>
+    <form action='lerCarrinho.html' id="tabelaProdutos"> 
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Valor (R$)</th>
+                <th>Quantidade</th>
+            </tr>
+        </table> <br>
 
+        <input type='submit' value='Adicionar ao carrinho' onclick="carregarProdutos();"> <!-- Botão para adicionar todos os produtos selecionados -->
+        <br>
+    </form>
+</body>
+</html>
